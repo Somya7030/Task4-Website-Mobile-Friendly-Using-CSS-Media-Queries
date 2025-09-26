@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ✅ Viewport for mobile scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Blog</title>
+    <style>
+      /* 🔹 Base Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .container {
+        display: flex;
+        margin: 20px;
+        gap: 20px;
+      }
+
+      .sidebar {
+        width: 300px;
+        background: #f4f4f4;
+        padding: 20px;
+      }
+
+      .content {
+        flex: 1;
+        padding: 20px;
+        background: #fafafa;
+      }
+
+      img {
+        max-width: 100%; /* ✅ Responsive images */
+        height: auto;
+        border-radius: 8px;
+      }
+
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+
+      /* 🔹 Responsive Styles */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* stack vertically */
+          margin: 10px;
+        }
+
+        .sidebar {
+          width: 100%;
+        }
+
+        nav ul {
+          flex-direction: column; /* stack menu vertically */
+          align-items: center;
+          gap: 10px;
+        }
+
+        body {
+          font-size: 14px; /* smaller font for mobile */
+          padding: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ✅ Header -->
+    <header>
+      <h1>My Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ✅ Main Layout -->
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Sidebar</h2>
+        <p>This is the sidebar area. It contains additional links or info.</p>
+      </aside>
+
+      <section class="content">
+        <h2>Main Content</h2>
+        <p>
+          Welcome to the responsive blog! Resize the browser or open on mobile
+          to see how the layout adapts.
+        </p>
+        <img src="https://via.placeholder.com/500" alt="Demo Image" />
+      </section>
+    </div>
+
+    <!-- ✅ Footer -->
+    <footer>
+      <p>Footer © 2025</p>
+    </footer>
+  </body>
+</html>
